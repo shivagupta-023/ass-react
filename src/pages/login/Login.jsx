@@ -4,7 +4,6 @@ import Input from '../../components/input/Input';
 import Button from '../../components/buttons/Button';
 
 function LoginPage() {
-  // Step 1: लॉगिन फॉर्म के डेटा के लिए state बनाएं
   const [loginData, setLoginData] = useState({
     email: '',
     password: ''
@@ -12,7 +11,6 @@ function LoginPage() {
 
   const navigate = useNavigate();
 
-  // इनपुट फील्ड में टाइप करने पर state को अपडेट करें
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setLoginData(prevData => ({
@@ -21,14 +19,11 @@ function LoginPage() {
     }));
   };
 
-  // Step 2: फॉर्म सबमिट होने पर डेटा को मिलाएं
   const handleLoginSubmit = (e) => {
     e.preventDefault();
 
-    // localStorage से रजिस्टर्ड यूज़र का डेटा निकालें
     const storedUserJSON = localStorage.getItem('userProfile');
 
-    // जांचें कि कोई यूज़र रजिस्टर्ड है भी या नहीं
     if (!storedUserJSON) {
       alert('No user found. Please create an account first.');
       return;
@@ -36,14 +31,10 @@ function LoginPage() {
 
     const registeredUser = JSON.parse(storedUserJSON);
 
-    // Step 3: डाले गए ईमेल को रजिस्टर्ड ईमेल से मिलाएं
-    // (हम पासवर्ड नहीं मिला रहे हैं क्योंकि हमने उसे सेव नहीं किया था)
     if (loginData.email === registeredUser.email && loginData.password) {
-      // अगर ईमेल मिलता है और पासवर्ड खाली नहीं है
       alert('Login successful!');
-      navigate('/account'); // अकाउंट पेज पर भेज दें
+      navigate('/account');
     } else {
-      // अगर ईमेल नहीं मिलता है
       alert('Invalid email or password.');
     }
   };

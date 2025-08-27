@@ -1,18 +1,18 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Step 1: Import useNavigate
-import Button from '../components/buttons/Button'; // आपका पाथ सही होना चाहिए
+import { useNavigate } from 'react-router-dom';
+import Button from '../components/buttons/Button';
 
 function Home() {
-    const navigate = useNavigate(); // Step 2: Initialize useNavigate
+    const navigate = useNavigate();
 
     const handleCreateAccountClick = () => {
         console.log("Redirecting to Create Account page...");
-        navigate('/register'); // Step 3: Navigate to the registration page
+        navigate('/register');
     };
 
     const handleLoginClick = () => {
         console.log("Redirecting to Login page...");
-        navigate('/login'); // Step 3: Navigate to the login page
+        navigate('/login');
     };
 
     return (

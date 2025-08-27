@@ -41,14 +41,11 @@ function CreateAccount() {
     const userProfile = {
       fullName: formData.fullName,
       email: formData.email,
-      profilePic: '' // इसे खाली रखें, यूजर बाद में अपलोड कर सकता है
+      profilePic: ''
     };
 
     localStorage.setItem('userProfile', JSON.stringify(userProfile));
-
     alert('Account Created Successfully! Redirecting...');
-    
-    // डेटा सेव करने के बाद Account Settings पेज पर नेविगेट करें
     navigate('/account'); 
   };
 
@@ -124,7 +121,6 @@ function CreateAccount() {
           </div>
         </div>
         
-        {/* इस बटन में onClick नहीं है, यह सिर्फ फॉर्म सबमिट करेगा */}
         <Button type="submit">Create Account</Button>
       </form>
     </div>

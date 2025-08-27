@@ -1,0 +1,35 @@
+/* src/components/Button/Button.css */
+.btn {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* primary */
+.btn-primary {
+  background-color: #6C25FF;
+  color: white;
+  transition: 0.3s ease;
+
+  &:hover{
+      background-color: #905cf8;
+  }
+}
+
+/* secondary  */
+.btn-secondary {
+  background-color: #E6D9FF; 
+  color: #6C25FF;
+  border: 1px solid #6C25FF;
+  transition: 0.3s ease;
+
+
+  &:hover{
+      background-color: #c9bfdd; 
+  }
+}

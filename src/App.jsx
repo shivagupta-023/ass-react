@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import './App.css';
-import './AllApp.css'
+import './App.css';
+// import './AllApp.css'
 import Home from './pages/Home';
 import CreateAccountPage from './pages/CreateAccount/CreateAccount';
 import Login from './pages/login/Login'; 

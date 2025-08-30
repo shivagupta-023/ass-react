@@ -3,15 +3,6 @@
 This project is a responsive frontend application built with React JS. It was created as a part of the qualifier task for the Intern/Fresher role. The application simulates a user registration, login, and profile management flow.
 
 ---
-
-## 🚀 Live Demo
-
-**[CLICK HERE TO VIEW THE LIVE PROJECT](https://your-netlify-or-vercel-link.app)**
-
-*(Upar diye gaye link mein `https://...` ki jagah apna live project ka link daalein)*
-
----
-
 ## ✨ Features Implemented
 
 - **User Registration:** A comprehensive form to create a new user account.
